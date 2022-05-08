@@ -1,0 +1,27 @@
+.main-container-left-bar {
+  min-height: 100%;
+  width: 89px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  background-color: #ff1e0a;
+
+  background-image: linear-gradient(
+    to top,
+    #690a0a,
+    #690a0a,
+    #690a0a,
+    #690a0a,
+    #991509,
+    #ff1e0a,
+    #991509,
+    #690a0a,
+    #690a0a,
+    #690a0a,
+    #690a0a,
+    #690a0a,
+    #94160a
+  );
+  @media (max-width: 600px) {
+    display: none;
+  }
+}

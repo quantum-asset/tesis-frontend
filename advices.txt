@@ -1,0 +1,4 @@
+usuarioContext.ID_USUARIO
+hace que no se vea nada porque 
+      usuarioContext  es null
+      entonces no puede acceder a un atributo interno

@@ -1,0 +1,22 @@
+.navbar-menu-icon {
+  display: none;
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+.navbar-title {
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+.navbar-nombre {
+  display: flex;
+  //font-size: 0.7em;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+  word-break: break-word;
+  @media (max-width: 600px) {
+    font-size: 0.9em;
+  }
+}

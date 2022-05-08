@@ -1,21 +1,28 @@
+import { ThemeProvider } from "@mui/material/styles";
 import * as React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
+import { UserProvider } from "./globals/contexts/userContext";
 import reportWebVitals from "./reportWebVitals";
+import MUImainTheme from "./theme/MuiTheme";
+import axios from "axios";
+/* import dotenv from "dotenv";
 
-/* const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-); */
 
+dotenv.config();
+
+ */
+
+axios.defaults.baseURL = "https://quantum-asset-backend.herokuapp.com/";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ThemeProvider theme={MUImainTheme}>
+    <UserProvider initialValue={{}}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </UserProvider>
+  </ThemeProvider>,
   rootElement
 );
 
