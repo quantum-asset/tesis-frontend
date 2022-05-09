@@ -20,6 +20,7 @@ const NuevaContrasenia = (props) => {
   const [codigoOk, setCodigoOk] = React.useState(false);
   const [constraseniasOk, setContraseniasOk] = React.useState(false);
   const [idUsuario, setIdUsuario] = React.useState(0);
+
   const checkCodigoRecuperacion = async (codigoRecuperacion) => {
     //llamar al backend para validar el código
     //const isValid = false;
@@ -36,7 +37,7 @@ const NuevaContrasenia = (props) => {
     }
   };
   React.useEffect(() => {
-    console.log(usuarioContext);
+    //console.log(usuarioContext);
     if (usuarioIsAuth(usuarioContext)) {
       const rolActual = usuarioContext.ROL.DENOMINACION.toLowerCase();
       if (rolActual.includes("locacion")) {

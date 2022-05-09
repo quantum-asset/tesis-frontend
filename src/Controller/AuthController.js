@@ -42,6 +42,7 @@ export class AuthController {
         return ResponseController.error("Ocurrio un error inesperado");
       }
       const { status, payload, message } = result.data;
+      return ResponseController.ok(status, message, payload);
     } catch (error) {
       return ResponseController.error("Ocurrio un error inesperado");
     }
