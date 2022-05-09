@@ -12,7 +12,8 @@ dotenv.config();
  */
 
 axios.defaults.baseURL = "https://quantum-asset-backend.herokuapp.com/";
-const rootElement = document.getElementById("root");
+
+//const rootElement = document.getElementById("root");
 ReactDOM.render(
   <ThemeProvider theme={MUImainTheme}>
     <UserProvider initialValue={{}}>
@@ -21,7 +22,8 @@ ReactDOM.render(
       </React.StrictMode>
     </UserProvider>
   </ThemeProvider>,
-  rootElement
+  document.getElementById("root")
+ // rootElement
 );
 
 // If you want to start measuring performance in your app, pass a function
