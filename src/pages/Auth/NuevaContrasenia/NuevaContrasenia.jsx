@@ -57,6 +57,7 @@ const NuevaContrasenia = (props) => {
     }
   }, [usuarioContext, recoverId]);
   const [contrasenia1, setContrasenia1] = React.useState("");
+  
   const [contrasenia2, setContrasenia2] = React.useState("");
   const handleChangeContrasenia1 = (value) => {
     setContrasenia1(value);
