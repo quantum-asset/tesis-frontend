@@ -78,7 +78,7 @@ const NuevaContrasenia = (props) => {
   }, [contrasenia1, contrasenia2]);
   const handleCambiarContrasenia = async () => {
     const { success, message, data } =
-      await UsuarioController.cambiarContrasenia(idUsuario);
+      await UsuarioController.cambiarContrasenia(idUsuario,contrasenia1);
     if (success) {
       alert(
         "Se cambio la contraseña satisfacoriamente. Ya puede iniciar sesión"
