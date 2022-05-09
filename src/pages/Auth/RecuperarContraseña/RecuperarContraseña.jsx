@@ -6,7 +6,10 @@ import "./RecuperarContraseña.scss";
 
 import { useNavigate } from "react-router";
 import { AuthController } from "../../../Controller/AuthController";
-import { UserContext, usuarioIsAuth } from "../../../globals/contexts/userContext";
+import {
+  UserContext,
+  usuarioIsAuth,
+} from "../../../globals/contexts/userContext";
 
 const RecuperarContraseña = (props) => {
   let navigate = useNavigate();
@@ -34,18 +37,19 @@ const RecuperarContraseña = (props) => {
   };
 
   const handleEnviarCodigo = async () => {
-   // alert("codigo enviado");
-    const { success, message
-    //  , data
-     } =
-      await AuthController.requestRecoverPassword(correoRecuperacion);
-      if(success){
-        //caso exitoso
-        alert(message);
-      }else{
-        //error
-        alert("Error: "+ message);
-      }
+    // alert("codigo enviado");
+    const {
+      success,
+      message,
+      //  , data
+    } = await AuthController.requestRecoverPassword(correoRecuperacion);
+    if (success) {
+      //caso exitoso
+      alert(message);
+    } else {
+      //error
+      alert("Error: " + message);
+    }
   };
 
   if (usuarioIsAuth(usuarioContext)) {
@@ -73,7 +77,7 @@ const RecuperarContraseña = (props) => {
             <br />
             <br />
             <Button
-              style={{ margin: "18px 2%", textTransform: "capitalize" }}
+              style={{ margin: "18px 0", textTransform: "capitalize" }}
               color="primary"
               variant="contained"
               fullWidth
@@ -81,6 +85,17 @@ const RecuperarContraseña = (props) => {
             >
               Enviar código de recuperación
             </Button>
+            <button
+              className="anchor"
+              style={{
+                //alignSelf: "flex-end",
+                margin: "10px 0",
+              }}
+              //onClick={handleOpenDialog}
+              onClick={() => navigate("/")}
+            >
+              Iniciar Sesion
+            </button>
           </React.Fragment>
         </div>
       </div>

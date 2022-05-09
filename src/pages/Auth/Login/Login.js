@@ -81,7 +81,7 @@ const Login = (props) => {
             </button>
 
             <Button
-              style={{ margin: "18px 2%", textTransform: "capitalize" }}
+              style={{ margin: "18px 0", textTransform: "capitalize" }}
               color="primary"
               variant="contained"
               fullWidth

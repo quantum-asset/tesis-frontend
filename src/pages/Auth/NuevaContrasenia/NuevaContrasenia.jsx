@@ -17,7 +17,7 @@ const NuevaContrasenia = (props) => {
   const { recoverId } = params;
   console.log("recover ID", recoverId);
   const [usuarioContext] = React.useContext(UserContext);
-  const [codigoOk, setCodigoOk] = React.useState(true);
+  const [codigoOk, setCodigoOk] = React.useState(false);
   const [constraseniasOk, setContraseniasOk] = React.useState(false);
   const [idUsuario, setIdUsuario] = React.useState(0);
   const checkCodigoRecuperacion = async (codigoRecuperacion) => {
@@ -57,7 +57,7 @@ const NuevaContrasenia = (props) => {
     }
   }, [usuarioContext, recoverId]);
   const [contrasenia1, setContrasenia1] = React.useState("");
-  
+
   const [contrasenia2, setContrasenia2] = React.useState("");
   const handleChangeContrasenia1 = (value) => {
     setContrasenia1(value);
