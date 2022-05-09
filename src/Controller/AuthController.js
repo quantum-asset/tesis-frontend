@@ -35,4 +35,15 @@ export class AuthController {
       return ResponseController.error("Ocurrio un error inesperado");
     }
   };
+  static checkCode= async (codigo)=>{
+    try {
+      const result = await axios.post("/auth/verificar-codigo", { codigo });
+      if (!result || !result.data || !result.data.payload) {
+        return ResponseController.error("Ocurrio un error inesperado");
+      }
+      const { status, payload, message } = result.data;
+    } catch (error) {
+      return ResponseController.error("Ocurrio un error inesperado");
+    }
+  }
 }

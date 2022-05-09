@@ -1,9 +1,9 @@
 export class ResponseController {
   /**
    *
-   * @param {*} status
-   * @param {*} message
-   * @param {*} data
+   * @param {boolean} status
+   * @param {string} message
+   * @param {any} data
    * @returns
    */
   static ok = (status, message, data) => {
@@ -16,7 +16,7 @@ export class ResponseController {
   };
   /**
    *
-   * @param {*} message
+   * @param {string} message
    * @returns
    */
   static error = (message) => {

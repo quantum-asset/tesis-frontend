@@ -40,5 +40,24 @@ export class UsuarioController {
     }
   };
   static store = async (data) => {};
-  static edit = async (id, data) => {};
+  static cambiarContrasenia = async (idUsuario, nuevaContrasenia) => {
+    try {
+      const result = await axios.put(`/usuario/${idUsuario}`, {
+        nuevaContrasenia,
+      });
+      console.log("cambiar contraseña result", result.data);
+      
+      if (!result) {
+        return ResponseController.error(
+          "Ocurrio un error de conexión, por favor intentelo denuevo mas tarde. Si el error persiste, contacte al administrador de Quantum Asset"
+        );
+      }
+      const { status, payload, message } = result.data;
+      return ResponseController.ok(status, message, payload);
+    } catch (error) {
+      return ResponseController.error(
+        "Ocurrio un error de conexión, por favor intentelo denuevo mas tarde. Si el error persiste, contacte al administrador de Quantum Asset"
+      );
+    }
+  };
 }
