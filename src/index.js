@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@mui/material/styles";
 import * as React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import QuantumApp from "./App";
 import { UserProvider } from "./globals/contexts/userContext";
 import reportWebVitals from "./reportWebVitals";
 import MUImainTheme from "./theme/MuiTheme";
@@ -18,7 +18,7 @@ ReactDOM.render(
   <ThemeProvider theme={MUImainTheme}>
     <UserProvider initialValue={{}}>
       <React.StrictMode>
-        <App />
+        <QuantumApp />
       </React.StrictMode>
     </UserProvider>
   </ThemeProvider>,

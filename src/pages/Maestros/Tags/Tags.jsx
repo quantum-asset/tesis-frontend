@@ -1,10 +1,10 @@
 import * as React from "react";
 
-const Configuracion = props =>{
+const Tags = props =>{
     return(
         <div>
-        
+        Tags RFID
         </div>
     )
 }
-export default Configuracion;
+export default Tags;

@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { FormLabel } from "@mui/material";
-import {  InputAdornment, TextField } from "@mui/material";
-const validator=()=>{
+import {  
+  //InputAdornment, 
+  TextField } from "@mui/material";
 
-}
 const FormInputText = (props) => {
   const {
     name,

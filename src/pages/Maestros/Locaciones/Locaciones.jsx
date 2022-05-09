@@ -1,10 +1,10 @@
 import * as React from "react";
 
-const Activos = props =>{
+const Locaciones = props =>{
     return(
         <div>
-        
+        Locaciones
         </div>
     )
 }
-export default Activos;
+export default Locaciones;

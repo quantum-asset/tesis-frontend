@@ -24,6 +24,7 @@ const Login = (props) => {
         navigate(`/eca`);
       }
     }
+    // eslint-disable-next-line
   }, [usuarioContext]);
 
   const [credenciales, setCredenciales] = React.useState({

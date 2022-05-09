@@ -24,7 +24,9 @@ const NuevaContrasenia = (props) => {
   const checkCodigoRecuperacion = async (codigoRecuperacion) => {
     //llamar al backend para validar el código
     //const isValid = false;
-    const { success, message, data } = await AuthController.checkCode(
+    const { success, 
+     // message, 
+      data } = await AuthController.checkCode(
       codigoRecuperacion
     );
 
@@ -56,6 +58,7 @@ const NuevaContrasenia = (props) => {
         checkCodigoRecuperacion(recoverId);
       }
     }
+    // eslint-disable-next-line
   }, [usuarioContext, recoverId]);
   const [contrasenia1, setContrasenia1] = React.useState("");
 
@@ -77,7 +80,9 @@ const NuevaContrasenia = (props) => {
     }
   }, [contrasenia1, contrasenia2]);
   const handleCambiarContrasenia = async () => {
-    const { success, message, data } =
+    const { success, message,
+      // data 
+      } =
       await UsuarioController.cambiarContrasenia(idUsuario,contrasenia1);
       
     if (success) {

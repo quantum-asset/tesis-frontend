@@ -1,7 +1,9 @@
 import * as React from "react";
 
 const IconLogut = (props) => {
-  const { color, size } = props;
+  const { color, 
+   // size 
+  } = props;
   return (
     <svg
       width="48"

@@ -1,45 +1,78 @@
 import "./styles/App.scss";
 import * as React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Enrutador,
+  Routes as Rutas,
+  Route as Ruta,
+} from "react-router-dom";
 
 import DefaultPage from "./pages/DefaultPage";
 import ECALayout from "./layouts/ECALayout";
 import ECALLayout from "./layouts/ECALLayout";
 import Login from "./pages/Auth/Login/Login";
 import Maestros from "./pages/Maestros/Maestros";
-import TomaInventario from "./pages/TomaInventario/TomaInventario";
 import Reportes from "./pages/Reportes/Reportes";
 import Configuracion from "./pages/Configuracion/Configuracion";
-import Activos from "./pages/Activos/Activos";
+
 import Alertas from "./pages/Alertas/Alertas";
 import RecuperarContraseña from "./pages/Auth/RecuperarContraseña/RecuperarContraseña";
 import NuevaContrasenia from "./pages/Auth/NuevaContrasenia/NuevaContrasenia";
+
+import DetalleActivo from "./pages/Maestros/Activos/DetalleActivo";
+import Activos from "./pages/Maestros/Activos/Activos";
+import TomaInventario from "./pages/TomaInventario/TomaInventario";
 function App() {
   console.log("App.js");
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />}/>
-        <Route path="/recuperar-contrasenia" element={<RecuperarContraseña />}/>
-        <Route path="/nueva-contrasenia" element={<NuevaContrasenia />}/>
-        <Route path="/nueva-contrasenia/:recoverId" element={<NuevaContrasenia />}/>
+    <Enrutador>
+      <Rutas>
+        {/* AUTH */}
+        <Ruta path="/" element={<Login />} />
+        <Ruta path="/recuperar-contrasenia" element={<RecuperarContraseña />} />
+        <Ruta path="/nueva-contrasenia" element={<NuevaContrasenia />} />
+        <Ruta
+          path="/nueva-contrasenia/:recoverId"
+          element={<NuevaContrasenia />}
+        />
 
-        <Route path="eca" element={<ECALayout />}>
-          <Route path="maestros" element={<Maestros />} />
-          <Route path="toma-inventario" element={<TomaInventario />} />
-          <Route path="reportes" element={<Reportes />} />
-          <Route path="configuracion" element={<Configuracion />} />
-        </Route>
+        {/* Encargado Control Activos */}
+        <Ruta path="eca" element={<ECALayout />}>
+          {/* MAESTROS */}
+          <Ruta path="maestros" element={<Maestros />} />
+          <Ruta path="maestros/detalleActivo" element={<DetalleActivo />} />
+          <Ruta
+            path="maestros/detalleActivo/:idActivo"
+            element={<DetalleActivo />}
+          />
+          <Ruta path="maestros/detalleLocacion" element={<DetalleActivo />} />
+          <Ruta
+            path="maestros/detalleLocacion/:idLocacion"
+            element={<DetalleActivo />}
+          />
 
-        <Route path="ecal" element={<ECALLayout />}>
-          <Route path="activos" element={<Activos />} />
-          <Route path="reportes" element={<Reportes />} />
-          <Route path="alertas" element={<Alertas />} />
-        </Route>
+          <Ruta path="toma-inventario" element={<TomaInventario />} />
+          <Ruta path="toma-inventario/detalle" element={<TomaInventario />} />
+          <Ruta
+            path="toma-inventario/detalle/:idTomaInventario"
+            element={<TomaInventario />}
+          />
 
-        <Route path="*" element={<DefaultPage />} />
-      </Routes>
-    </BrowserRouter>
+          <Ruta path="reportes" element={<Reportes />} />
+          <Ruta path="configuracion" element={<Configuracion />} />
+        </Ruta>
+
+        {/* Encargado Control Activos de locacion */}
+        <Ruta path="ecal" element={<ECALLayout />}>
+          <Ruta path="activos" element={<Activos />} />
+          <Ruta path="activos/detalle" element={<DetalleActivo />} />
+          <Ruta path="activos/detalle/:idActivo" element={<DetalleActivo />} />
+          <Ruta path="reportes" element={<Reportes />} />
+          <Ruta path="alertas" element={<Alertas />} />
+        </Ruta>
+
+        <Ruta path="*" element={<DefaultPage />} />
+      </Rutas>
+    </Enrutador>
   );
 }
 

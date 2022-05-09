@@ -37,10 +37,10 @@ export default function SuperDialog(props) {
     onCancel?.(data);
     handleClose();
   };
-  const handleSave = (data) => {
+ /*  const handleSave = (data) => {
     onSave?.(data);
     handleClose();
-  };
+  }; */
   return (
     <div>
       <Dialog
