@@ -6,11 +6,9 @@ import { UserProvider } from "./globals/contexts/userContext";
 import reportWebVitals from "./reportWebVitals";
 import MUImainTheme from "./theme/MuiTheme";
 import axios from "axios";
-/* import dotenv from "dotenv";
-
-
+/* 
+import dotenv from "dotenv";
 dotenv.config();
-
  */
 
 axios.defaults.baseURL = "https://quantum-asset-backend.herokuapp.com/";
