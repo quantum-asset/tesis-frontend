@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "16.x",
-    "npm": "8.1.2"
+    "node": "16.13.1"
   },
   "dependencies": {
     "@dropzone-ui/react": "^6.7.1",
