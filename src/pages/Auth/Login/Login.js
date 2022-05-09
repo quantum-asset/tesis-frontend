@@ -1,11 +1,11 @@
 import * as React from "react";
 import { useNavigate } from "react-router";
-import { UserContext, usuarioIsAuth } from "../../globals/contexts/userContext";
 import "./Login.scss";
-import FormInputText from "../../components/Formulario/FormInputText";
-import logo from "../../Static/logo-h-nb3.png";
+import FormInputText from "../../../components/Formulario/FormInputText";
+import logo from "../../../Static/logo-h-nb3.png";
 import { Button } from "@mui/material";
-import { AuthController } from "../../Controller/AuthController";
+import { AuthController } from "../../../Controller/AuthController";
+import { UserContext, usuarioIsAuth } from "../../../globals/contexts/userContext";
 const Login = (props) => {
   let navigate = useNavigate();
   const [usuarioContext, setUsuarioContext] = React.useContext(UserContext);

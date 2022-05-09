@@ -1,11 +1,12 @@
 import * as React from "react";
-import logo from "../../Static/logo-h-nb3.png";
+import logo from "../../../Static/logo-h-nb3.png";
 import { Button } from "@mui/material";
-import FormInputText from "../../components/Formulario/FormInputText";
+import FormInputText from "../../../components/Formulario/FormInputText";
 import "./RecuperarContraseña.scss";
-import { UserContext, usuarioIsAuth } from "../../globals/contexts/userContext";
+
 import { useNavigate } from "react-router";
-import { AuthController } from "../../Controller/AuthController";
+import { AuthController } from "../../../Controller/AuthController";
+import { UserContext, usuarioIsAuth } from "../../../globals/contexts/userContext";
 
 const RecuperarContraseña = (props) => {
   let navigate = useNavigate();

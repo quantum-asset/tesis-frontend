@@ -5,14 +5,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultPage from "./pages/DefaultPage";
 import ECALayout from "./layouts/ECALayout";
 import ECALLayout from "./layouts/ECALLayout";
-import Login from "./pages/Login/Login";
+import Login from "./pages/Auth/Login/Login";
 import Maestros from "./pages/Maestros/Maestros";
 import TomaInventario from "./pages/TomaInventario/TomaInventario";
 import Reportes from "./pages/Reportes/Reportes";
 import Configuracion from "./pages/Configuracion/Configuracion";
 import Activos from "./pages/Activos/Activos";
 import Alertas from "./pages/Alertas/Alertas";
-import RecuperarContraseña from "./pages/RecuperarContraseña/RecuperarContraseña";
+import RecuperarContraseña from "./pages/Auth/RecuperarContraseña/RecuperarContraseña";
 import NuevaContrasenia from "./pages/Auth/NuevaContrasenia/NuevaContrasenia";
 function App() {
   console.log("App.js");
