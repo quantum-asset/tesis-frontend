@@ -1,6 +1,6 @@
 .quantum-main-container-eca {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: row;
 
@@ -64,6 +64,7 @@
     width: calc(100% - 89px);
     display: flex;
     flex-direction: column;
+    overflow: auto;
     @media (max-width: 600px) {
       width: 100%;
     }

@@ -18,7 +18,7 @@ export default function TabsScroll(props) {
       variant="scrollable"
       scrollButtons="auto"
       aria-label="scrollable auto tabs example"
-      //style={{}}
+      style={{ backgroundColor: "#DCD8D8" }}
     >
       {tabs.map((tab, index) => (
         <Tab label={tab} key={index} />

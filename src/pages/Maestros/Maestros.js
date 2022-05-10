@@ -8,19 +8,18 @@ const Maestros = (props) => {
     setMaestroActivo(newValue);
   };
   return (
-    <div>
+    <React.Fragment>
       <TabsScroll
         onChange={handleChangeMaestro}
         value={maestroActivo}
         tabs={["Activos Fijos", "Locaciones", "Tags RFID", "Usuarios y roles"]}
       />
-  
-          <MaestroSelector maestroActivo={maestroActivo}/>
-    </div>
+
+      <MaestroSelector maestroActivo={maestroActivo} />
+    </React.Fragment>
   );
 };
 export default Maestros;
-
 
 /**
      {(() => {
