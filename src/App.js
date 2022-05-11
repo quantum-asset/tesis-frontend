@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import DefaultPage from "./pages/DefaultPage";
-import ECALayout from "./layouts/ECALayout";
+//import ECALayout from "./layouts/ECALayout";
 import ECALLayout from "./layouts/ECALLayout";
 import Login from "./pages/Auth/Login/Login";
 import Maestros from "./pages/Maestros/Maestros";
@@ -21,6 +21,7 @@ import NuevaContrasenia from "./pages/Auth/NuevaContrasenia/NuevaContrasenia";
 import DetalleActivo from "./pages/Maestros/Activos/DetalleActivo";
 import Activos from "./pages/Maestros/Activos/Activos";
 import TomaInventario from "./pages/TomaInventario/TomaInventario";
+import ECALayout2 from "./layouts/ECALayout2";
 function App() {
   console.log("App.js");
   return (
@@ -36,7 +37,7 @@ function App() {
         />
 
         {/* Encargado Control Activos */}
-        <Ruta path="eca" element={<ECALayout />}>
+        <Ruta path="eca" element={<ECALayout2 />}>
           {/* MAESTROS */}
           <Ruta path="maestros" element={<Maestros />} />
           <Ruta path="maestros/detalleActivo" element={<DetalleActivo />} />

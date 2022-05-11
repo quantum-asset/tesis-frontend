@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "./Title.scss";
 const Title = (props) => {
-  const { title, subTitle,smallTitle } = props;
+  const { title, subTitle, smallTitle } = props;
   return (
     <Fragment>
       {title && <div className="quantum-main-title">{title}</div>}

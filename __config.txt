@@ -1,0 +1,5 @@
+politicas(ambas)
+vigencia de toma de inventario??
+cabeceras de archivos (por cada tabla)
+tamaño y tipos de archivo para carga masiva (CSV y/o XLSX)
+tamaño y tipos de archivo para exportar (CSV y/o XLSX)

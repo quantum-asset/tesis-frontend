@@ -12,91 +12,97 @@ const PanelActivo = (props) => {
   const handleChange = (value, nombre) => {};
   return (
     <div className="quantum-panel">
-      <SearchInputText
-        onChange={handleChange}
-      //  style={{ margin: "2px 0" }}
-        name={"DENOMINACION"}
-        // value={localFiltros[0].value}
-        fullWidth
-        placeholder="Denominación del activo"
-        label={"Denominación"}
-      />
-      <Button
-        color="primary"
-        variant="contained"
-        //size="small"
-        //fullWidth
-        style={{ margin: "1px", textTransform: "capitalize" }}
-        startIcon={<FileDownloadIcon />}
-        onClick={() => {
-          onDownload?.();
-        }}
-        //onClick={iniciarSesion}
-      >
-        Descargar
-      </Button>
-      <Button
-        color="primary"
-        variant="contained"
-        //size="small"
-        style={{ margin: "1px", textTransform: "capitalize" }}
-        //fullWidth
-        startIcon={<UploadFileIcon />}
-        //onClick={iniciarSesion}
-        //onClick={() => setOpenCargaMasiva(true)}
-      >
-        Subir CSV
-      </Button>
+      <div className="parte-sup">
+        <div className="mitad-izq">
+          <SearchInputText
+            onChange={handleChange}
+            name={"DENOMINACION"}
+            fullWidth
+            placeholder="Denominación del activo"
+            label={"Denominación"}
+          />
+        </div>
+        <div className="mitad-der">
+          <Button
+            color="primary"
+            variant="contained"
+            //size="small"
+            //fullWidth
+            //style={{ margin: "1px", textTransform: "capitalize" }}
+            startIcon={<FileDownloadIcon />}
+            onClick={() => {
+              onDownload?.();
+            }}
+            //onClick={iniciarSesion}
+          >
+            Descargar
+          </Button>
+          <Button
+            color="primary"
+            variant="contained"
+            //size="small"
+            //style={{ margin: "1px", textTransform: "capitalize" }}
+            //fullWidth
+            startIcon={<UploadFileIcon />}
+            //onClick={iniciarSesion}
+            //onClick={() => setOpenCargaMasiva(true)}
+          >
+            Subir CSV
+          </Button>
 
-      <Tooltip title="Agregar Nuevo Activo">
-        <Fab
-          color="primary"
-          aria-label="add"
-          size="small"
-          style={{ margin: "1px" }}
-          //onClick={() => setOpenDialogRecuperacion(true)}
-        >
-          <AddIcon />
-        </Fab>
-      </Tooltip>
+          <Tooltip title="Agregar Nuevo Activo">
+            <Fab
+              color="primary"
+              aria-label="add"
+              size="small"
+              //style={{ margin: "1px" }}
+              //onClick={() => setOpenDialogRecuperacion(true)}
+            >
+              <AddIcon />
+            </Fab>
+          </Tooltip>
+        </div>
+      </div>
 
-      <SearchInputText
-        onChange={handleChange}
-        style={{ margin: "2px 0" }}
-        name={"COD_TAG"}
-        // value={localFiltros[0].value}
-        fullWidth
-        placeholder="Nro de tag"
-        label={"Num. de tag"}
-      />
-      <SearchInputText
-        onChange={handleChange}
-        style={{ margin: "2px 0" }}
-        name={"LOCACION"}
-        fullWidth
-        // value={localFiltros[0].value}
-        placeholder="Locación"
-        label={"Locación"}
-      />
-      <SearchInputText
-        onChange={handleChange}
-        style={{ margin: "2px 0" }}
-        name={"PROVEEDOR"}
-        fullWidth
-        //value={filtros.DENOMINACION}
-        placeholder="Razon social del proveedor"
-        label={"Proveedor"}
-      />
+      <div className="parte-inferiror">
+        <SearchInputText
+          onChange={handleChange}
+          style={{ margin: "2px 0" }}
+          name={"COD_TAG"}
+          // value={localFiltros[0].value}
+          fullWidth
+          placeholder="Nro de tag"
+          label={"Num. de tag"}
+        />
+        <SearchInputText
+          onChange={handleChange}
+          style={{ margin: "2px 0" }}
+          name={"LOCACION"}
+          fullWidth
+          // value={localFiltros[0].value}
+          placeholder="Locación"
+          label={"Locación"}
+        />
+        <SearchInputText
+          onChange={handleChange}
+          style={{ margin: "2px 0" }}
+          name={"PROVEEDOR"}
+          fullWidth
+          //value={filtros.DENOMINACION}
+          placeholder="Razon social del proveedor"
+          label={"Proveedor"}
+        />
 
-      <SearchInputText
-        onChange={handleChange}
-        style={{ margin: "2px 0" }}
-        name={"TIPO_ACTIVO"}
-        fullWidth
-        // value={filtros.DENOMINACION}
-        placeholder="Tipo de activo"
-        label={"Tipo de Activo"}
-      />
+        <SearchInputText
+          onChange={handleChange}
+          style={{ margin: "2px 0" }}
+          name={"TIPO_ACTIVO"}
+          fullWidth
+          // value={filtros.DENOMINACION}
+          placeholder="Tipo de activo"
+          label={"Tipo de Activo"}
+        />
+      </div>
     </div>
   );
 };

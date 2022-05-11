@@ -102,10 +102,14 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 export default function SuperPaginationTable(props) {
-  const { rows = [], headers } = props;
+  const {
+    rows = [],
+    headers,
+    noDataLabel = "Aún no hay activos fijos registrados",
+  } = props;
   console.log("Tabla Activos", props);
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
@@ -129,13 +133,14 @@ export default function SuperPaginationTable(props) {
               headers.map((header, index) => (
                 <StyledTableCell
                   key={index}
-                  align={
+                  /* align={
                     index === headers.length - 1
                       ? "center"
                       : index !== 0
                       ? "left"
                       : "right"
-                  }
+                  } */
+                  align={index === headers.length - 1 ? "center" : "left"}
                 >
                   {header.title}
                 </StyledTableCell>
@@ -178,7 +183,7 @@ export default function SuperPaginationTable(props) {
                   justifyContent: "center",
                 }}
               >
-                Aún no hay activos fijos registrados
+                {noDataLabel}
               </div>
             </StyledTableRow>
           )}

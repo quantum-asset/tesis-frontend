@@ -10,7 +10,7 @@ export const ActivosHeaders = (
   { title: "Tipo de activo", field: "TIPO_ACTIVO" },
 
   { title: "Denominación", field: "DENOMINACION" },
-  { title: "Características", field: "OBSERVACIONES" },
+  //{ title: "Características", field: "OBSERVACIONES" },
   //{ title: "Marca y Modelo", field: "MARCA_MODELO" },
   { title: "Marca y Modelo", field: "MARCA" },
 

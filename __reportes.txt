@@ -1,0 +1,10 @@
+# solicitudes Tags RFID (atendidos y pendientes) + últia atención + locacion con mayor cant. sol
+# solicitudes de toma de inventario + ultima locación
+# nuevos activos fijos
+# activos (esperados, no esperados, no encontrados) (si estaba en otra locacion es no encontrado y doy de baja, en el futuro lo encuentro, no solo actualizo su ocación, también lo reactivo)
+# procesos de toma de inventario (progreso, finalizado = por procesar, procesado)
+
+#cantidad de locaciones con toma de inventario vigente
+
+# TIEMPO PROMEDIO DE TOMA DE INVENTARIO X LOCACION
+#tomas de inventario V.s tiempo 
