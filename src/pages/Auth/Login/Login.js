@@ -2,10 +2,11 @@ import * as React from "react";
 import { useNavigate } from "react-router";
 import "./Login.scss";
 import FormInputText from "../../../components/Formulario/FormInputText";
-import logo from "../../../Static/logo-h-nb3.png";
+
 import { Button } from "@mui/material";
 import { AuthController } from "../../../Controller/AuthController";
 import { UserContext, usuarioIsAuth } from "../../../globals/contexts/userContext";
+import { logoKamuiHorizontal } from "../../../Static/imageLinks";
 const Login = (props) => {
   let navigate = useNavigate();
   const [usuarioContext, setUsuarioContext] = React.useContext(UserContext);
@@ -52,7 +53,7 @@ const Login = (props) => {
         <div className="main-container-login">
           <div className="form-container">
             <div className="logo-container">
-              <img src={logo} width="50%" alt="logo-login" />
+              <img src={logoKamuiHorizontal} width="50%" alt="logo-login" />
             </div>
             <h3>Inicia sesión</h3>
             <FormInputText

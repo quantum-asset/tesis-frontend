@@ -1,5 +1,4 @@
 import * as React from "react";
-import logo from "../../../Static/logo-h-nb3.png";
 import { Button } from "@mui/material";
 import FormInputText from "../../../components/Formulario/FormInputText";
 import "./RecuperarContraseña.scss";
@@ -10,6 +9,7 @@ import {
   UserContext,
   usuarioIsAuth,
 } from "../../../globals/contexts/userContext";
+import { logoKamuiHorizontal } from "../../../Static/imageLinks";
 
 const RecuperarContraseña = (props) => {
   let navigate = useNavigate();
@@ -59,7 +59,7 @@ const RecuperarContraseña = (props) => {
       <div className="main-container-recover">
         <div className="form-container">
           <div className="logo-container">
-            <img src={logo} width="50%" alt="logo-login" />
+            <img src={logoKamuiHorizontal} width="50%" alt="logo-login" />
           </div>
 
           <React.Fragment>

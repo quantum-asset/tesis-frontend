@@ -1,8 +1,7 @@
 import * as React from "react";
-//import "./LeftBar.scss"
-import logo from "../../../Static/kamui-white.png";
 import IconLogut from "../../../iconos/Icons JSX/IconLogut";
 import LeftBarButton from "./LeftBarButton";
+import { logoLeftBar } from "../../../Static/imageLinks";
 
 const LeftBar = (props) => {
   const {
@@ -21,7 +20,7 @@ const LeftBar = (props) => {
     <div className="quantum-left-bar">
       <div className="top-options">
         <div className="side-bar-image-container">
-          <img src={logo} width="85%" alt="logo-kamui-menu" />
+          <img src={logoLeftBar} width="85%" alt="logo-kamui-menu" />
         </div>
         {children}
       </div>

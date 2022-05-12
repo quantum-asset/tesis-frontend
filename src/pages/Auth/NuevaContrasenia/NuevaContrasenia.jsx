@@ -6,10 +6,11 @@ import {
 } from "../../../globals/contexts/userContext";
 import { Button, FormLabel } from "@mui/material";
 import FormInputText from "../../../components/Formulario/FormInputText";
-import logo from "../../../Static/logo-h-nb3.png";
+
 import "./NuevaContrasenia.scss";
 import { AuthController } from "../../../Controller/AuthController";
 import { UsuarioController } from "../../../Controller/UsuarioControler";
+import { logoKamuiHorizontal } from "../../../Static/imageLinks";
 
 const NuevaContrasenia = (props) => {
   let navigate = useNavigate();
@@ -102,7 +103,7 @@ const NuevaContrasenia = (props) => {
       <div className="main-container-nueva-contrasenia">
         <div className="form-container">
           <div className="logo-container">
-            <img src={logo} width="50%" alt="logo-login" />
+            <img src={logoKamuiHorizontal} width="50%" alt="logo-login" />
           </div>
 
           <React.Fragment>

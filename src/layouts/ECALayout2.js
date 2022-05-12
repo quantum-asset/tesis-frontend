@@ -11,10 +11,10 @@ import IconConfig from "../Icons/IconConfig";
 import IconControl from "../Icons/IconControl";
 import IconDashBoard from "../Icons/IconDashBoard";
 import IconMaestros from "../Icons/IconMaestros";
-import logoMobile from "../Static/logo-h-nb3.png";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import "./ECALayout2.scss";
+import { logoKamuiHorizontal } from "../Static/imageLinks";
 const ECALayout2 = (props) => {
   const [mobileMenuOpen, setOpenMobileMenuOpen] = React.useState(false);
   const handleMobileMenuOpen = () => {
@@ -142,7 +142,7 @@ const ECALayout2 = (props) => {
                   <MenuIcon />
                 </IconButton>
               </div>
-              <img src={logoMobile} height="50px" />
+              <img src={logoKamuiHorizontal} height="50px" />
             </div>
             <MobileBarButton onClick={handleVerReportes} active={isActive(3)}>
               <IconDashBoard color={setColorMobile(0)} size={45} />

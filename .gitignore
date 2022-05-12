@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+open-vs-code-here.cmd
+
+__heroku
+advices.txt
+__config.txt
+__reportes.txt
+__ui_arreglos

@@ -1,8 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./SideBar.scss";
-import logo from "./../../../Static/terpelisimo-logo-white3.png";
-import logoMobile from "./../../../Static/logo-h-nb3.png";
-
 import LogoutIcon from "@mui/icons-material/Logout";
 import IconSelector, { sideBarOptions } from "./SideBarOptions";
 import SideBarButton from "./SideBarButton";
@@ -11,6 +8,7 @@ import SideBarMobileButton from "./SideBarMobileButton";
 import { IconButton } from "@mui/material";
 import { cerrarSesionRedux } from "../../../Context/actions/sesionAction";
 import { useUserValue } from "../../../Context/Sesion";
+import { logoKamuiHorizontal, logoLeftBar } from "../../../Static/imageLinks";
 
 const SideBar = (props) => {
   const [{ auth, usuario }, dispatch] = useUserValue();
@@ -40,7 +38,7 @@ const SideBar = (props) => {
       <div className="main-side-bar">
         <div className="main-side-bar-actions">
           <div className="side-bar-image-container">
-            <img src={logo} width="80%" alt="logo-terpelisimo" />
+            <img src={logoLeftBar} width="80%" alt="logo-terpelisimo" />
           </div>
           {myOptions.map(({ label, redirect, title }, index) => ( 
             <SideBarButton
@@ -92,7 +90,7 @@ console.log("logoutttttt",resposne);
           <div className="main-side-bar-mobile"onClick={(e)=>{e.preventDefault()}}>
             <div className="side-bar-mobile-actions">
               <div className="image-container-mobile">
-                <img src={logoMobile} height="50px" alt="logo-terpelisimo" />
+                <img src={logoKamuiHorizontal} height="50px" alt="logo-terpelisimo" />
                 <IconButton
                   style={{ color: "white" }}
                   aria-label="upload picture"
