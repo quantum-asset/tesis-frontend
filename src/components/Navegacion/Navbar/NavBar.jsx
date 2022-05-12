@@ -21,10 +21,10 @@ export default function NavBarElevate(props) {
   }, ${NOMBRES}`;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const { title, onChangeMobileMenu } = props;
+  const { title, onMobileMenuOpen } = props;
 
   const handleOpenMobileMenu = () => {
-    onChangeMobileMenu?.(true);
+    onMobileMenuOpen?.();
   };
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);

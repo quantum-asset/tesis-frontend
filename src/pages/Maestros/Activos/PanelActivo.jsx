@@ -55,7 +55,7 @@ const PanelActivo = (props) => {
               color="primary"
               aria-label="add"
               size="small"
-              //style={{ margin: "1px" }}
+              style={{ zIndex: 1 }}
               //onClick={() => setOpenDialogRecuperacion(true)}
             >
               <AddIcon />

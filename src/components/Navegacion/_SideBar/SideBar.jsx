@@ -42,7 +42,7 @@ const SideBar = (props) => {
           <div className="side-bar-image-container">
             <img src={logo} width="80%" alt="logo-terpelisimo" />
           </div>
-          {myOptions.map(({ label, redirect, title }, index) => (
+          {myOptions.map(({ label, redirect, title }, index) => ( 
             <SideBarButton
               active={activePage === index}
               onClick={(e) => {

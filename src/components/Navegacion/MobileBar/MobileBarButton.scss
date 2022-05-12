@@ -1,0 +1,17 @@
+.main-side-bar-mobile-button {
+  box-shadow: 
+  0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  //background-color: transparent;
+  border-radius: 6px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 100%;
+  //margin: 5px 0;
+  &:hover {
+    background-color: rgba(161, 126, 60, 0.63);
+  }
+}
