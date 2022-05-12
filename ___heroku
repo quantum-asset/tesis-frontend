@@ -8,7 +8,7 @@ heroku create
 
 //add space in CLI
 
-heroku config:set NODE_OPTIONS="--max_old_space_size=2560" -a [app_name]
+heroku config:set NODE_OPTIONS="--max_old_space_size=5120" -a [app_name]
 
 
 ///package json
