@@ -57,6 +57,7 @@ const TomaInventario = (props) => {
     alert("delete " + id);
   };
   const handleEdit = (id) => {
+      
     alert("edit " + id);
   };
   const handleSee = (id) => {
