@@ -4,7 +4,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 /**
  * options must be an array of objects
  * all of them must have a key="label"
- * ---=>   
+ * ---=>
  *      [
  *          {label:"sevwerver", ...},
  *          {label:"sevwerver", ...},
@@ -14,9 +14,9 @@ import Autocomplete from "@mui/material/Autocomplete";
  * @returns
  */
 const ComboBox = (props) => {
-  const { options, style, label, onChange } = props;
+  const { options, style, label, onChange, defaultValue } = props;
   const handleChange = (e, value, reason) => {
-    onChange?.(e, value, reason);
+    onChange?.(value);
   };
   return (
     <Autocomplete
@@ -26,9 +26,10 @@ const ComboBox = (props) => {
       options={options || []}
       size="small"
       style={style || { margin: "0 5px" }}
+      defaultValue={defaultValue.label}
       renderInput={(params) => (
         <MuiTextField
-          size="small"
+          //size="small"
           type="search"
           variant="outlined"
           {...params}

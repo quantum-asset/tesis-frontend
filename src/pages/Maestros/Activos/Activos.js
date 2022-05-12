@@ -6,18 +6,8 @@ import "./Activos.scss";
 import PanelActivo from "./PanelActivo";
 import { ActivosHeaders } from "./ActivosHeaders";
 const Activos = (props) => {
-  const { rowsFiltrado, handleDetalle } = props;
   const [localRows, setLocalRows] = React.useState([]);
-  /*   const refactorListActivos = (data) => {
-    console.log("data", data);
-    return data.map((A) => {
-      return {
-        ...A,
-        LOCACION: A.LOCACION.DENOMINACION,
-        TIPO_ACTIVO: A.TIPO_ACTIVO.DENOMINACION,
-      };
-    });
-  }; */
+
   React.useEffect(() => {
     const callActivosData = async () => {
       const { success, message, data } = await ActivosController.list();
@@ -40,7 +30,7 @@ const Activos = (props) => {
   };
   const handleSee = (id) => {
     alert("see " + id);
-    handleDetalle?.(id);
+    //handleDetalle?.(id);
   };
   return (
     <div className="quantum-activos-page">

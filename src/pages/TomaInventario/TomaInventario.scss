@@ -1,0 +1,41 @@
+.quantum-toma-inventario-page {
+    width: 100%;
+    background-color: #f3f6f9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0;
+    .quantum-body-left {
+    
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 25px;
+    }
+    .quantum-body-right {
+      background-color: burlywood;
+      width: 25%;
+      min-height: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+    @media (max-width: 900px) {
+      padding-left: 0px;
+      width: 100%;
+      flex-direction: column;
+      .quantum-body-left {
+      
+        width: 100%;
+      
+      }
+      .quantum-body-right {
+      
+        width: 100%;
+      }
+    }
+  }
+  
