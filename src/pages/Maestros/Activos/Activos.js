@@ -25,7 +25,7 @@ const Activos = (props) => {
         // const datRefactorizada = refactorListActivos(data);
         console.log("data", data);
         setLocalRows(data);
-        alert("éxito " + data.length);
+       // alert("éxito " + data.length);
       } else {
         alert(message);
       }
