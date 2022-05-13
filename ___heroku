@@ -1,5 +1,5 @@
 #after commit
-heroku create
+heroku create <NAME_APP>
 
 
 => git push heroku master

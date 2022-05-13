@@ -27,9 +27,10 @@
     "xlsx": "^0.18.5"
   },
   "scripts": {
-    "start": "node --max_old_space_size=5120 node_modules/.bin/react-scripts start",
-    "build": "node --max_old_space_size=5120 node_modules/.bin/react-scripts build",
-    "dev": "react-scripts start",
+    "herku:start": "node --max_old_space_size=5120 node_modules/.bin/react-scripts start",
+    "heroku:build": "node --max_old_space_size=5120 node_modules/.bin/react-scripts build",
+    "build": "react-scripts build",
+    "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "git add . && git commit -m Heroku && git push heroku master",
